@@ -41,7 +41,7 @@ To utilize multiprocessing for generating images and their corresponding labels,
       │   └── flair.nii.gz
       ├── ...
     
-**Run demo**
+**Run with multiprocessing**
 ```
 python Prompt-multi-tumor.py
 
