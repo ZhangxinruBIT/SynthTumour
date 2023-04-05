@@ -137,7 +137,7 @@ def main(
         Img = nib.load(input_path).get_fdata()
         # nib.Nifti1Image(Img,affine=dt.affine).to_filename(output_image_path)
         # exit()
-        prompt_img,prompt_lab = promptV5_2_PLUS(Img,Lab,high_propmt_percent = 0.9,task = task)
+        prompt_img,prompt_lab = prompt(Img,Lab,high_propmt_percent = 0.9,task = task)
         nib.Nifti1Image(prompt_lab.astype('float32'),affine=dt.affine).to_filename(output_label_path)
         nib.Nifti1Image(prompt_img,affine=dt.affine).to_filename(output_image_path)
             
@@ -167,15 +167,13 @@ def ensure_images(input_path):
 
         
 #216,217,218,219,230
-def promptV5_2_PLUS(img,lab,high_propmt_percent,task=False):
+def prompt(img,lab,high_propmt_percent,task=False):
     import random
-    print('promptV5-resect3')
     timg = np.copy(img)
     tlab = np.copy(lab)
-    #test = gaussian_filter(timg,sigma=5))
+ 
     test = gaussian_filter(timg,sigma=5) #v256
-    # t = random.uniform(0.5,1)
-    # sub_mask = tlab             #gaussian_filter(tlab,t)
+
     if random.random()<high_propmt_percent:
         t = np.random.uniform(1.5,5)
         sub_mask = tlab>0
