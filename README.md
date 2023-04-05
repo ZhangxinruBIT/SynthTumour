@@ -1,7 +1,7 @@
 # PL-BTS
 
 
-Please also cite this paper if you are using CarveMix for your research!
+Please also cite this paper if you are using PL-BTS for your research! For more information about CarveMix, please read the following [papper](https://arxiv.org/abs/2304.01472)
 
      @misc{zhang2023unsupervised,
            title={Unsupervised Brain Tumor Segmentation with Image-based Prompts}, 
