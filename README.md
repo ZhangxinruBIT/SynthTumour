@@ -30,7 +30,7 @@ git clone https://github.com/ZhangxinruBIT/PL-BTS.git
 # Usage for Generation
 **Run demo**
 ```
-cd PL-BTS
+cd SynthTumour
 python resect-multi-tumor.py  DemoData/OAS30003_MR_d1631/flair.nii.gz test_img.nii.gz test_lab.nii.gz
 
 ```
@@ -59,7 +59,7 @@ To utilize multiprocessing for generating images and their corresponding labels,
     
 # Run with multiprocessing for tumour generation in Stage 1
 ```
-cd PL-BTS
+cd SynthTumour
 python Prompt-multi-tumor.py
 
 ```
@@ -91,7 +91,7 @@ Figure 2 illustrates the importance of the validation task in preventing overfit
 After you train a junior model, you can obtain the pseudo with the junior model, and utilised for the generation in the Stage 2.
 
 ```
-cd PL-BTS
+cd SynthTumour
 python Stage2_mixed_with_pseudo_label.py --mask_check_path XXXX --imagesTr_path XXXX --labelsTr_path XXXX --healthyimgTr XXXX 
 ```
 --mask_check_path: Path to save csv file
