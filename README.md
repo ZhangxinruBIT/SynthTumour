@@ -1,4 +1,4 @@
-# PL-BTS: Unsupervised Brain Tumor Segmentation with Image-based Prompts
+# SynthTumour: Unsupervised Brain MRI Tumour Segmentation via Two-Stage Image Synthesis
 
 Please also cite this paper if you are using PL-BTS for your research! For more information about PL-BTS, please read the following [paper](https://arxiv.org/abs/2304.01472)
 
@@ -102,7 +102,7 @@ python Stage2_mixed_with_pseudo_label.py --mask_check_path XXXX --imagesTr_path 
 
 --healthyimgTr:Path to raw healthy images, like tumour-free images also with nnU-Net like data structure
 
-
+Next, you can train a senior model using nnU-Net! Make sure to combine the mixed data (imagesTrMix and labelsMix) with the original data and the pseudo-labels (imagesTr and labelsTr) for training.
 
 
 
