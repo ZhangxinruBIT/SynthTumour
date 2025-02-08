@@ -12,8 +12,8 @@ Please also cite this paper if you are using PL-BTS for your research! For more 
      }
 
 
-Figure 1 provides an overview of the method proposed in this study.
-![image](Figs/overview.png)
+Figure 1 provides an overview of the method proposed in this study. Overview of SynthTumour, an unsupervised brain MRI tumour segmentation method with a two-stage synthesis strategy. In the first stage, empirical shape and intensity models are applied to generate synthetic images for junior model training. In the second stage, unlabelled brain tumour images are used, mixed with pseudo-labels from the junior model to synthesise images with realistic tumour shapes and textures for senior model training.
+![image](Figs/Overview.png)
 
 
 Our work drew inspiration from the amazing fepegar's [resector](https://github.com/fepegar/resector) tool, which served as the main basis for generating the 3D tumor-like shape. We made certain revisions to the tool to suit our specific needs.
