@@ -1,6 +1,6 @@
 # SynthTumour: Unsupervised Brain MRI Tumour Segmentation via Two-Stage Image Synthesis
 
-Please also cite this paper if you are using PL-BTS for your research! For more information about PL-BTS, please read the following [paper](https://arxiv.org/abs/2304.01472)
+Please also cite this paper if you are using PL-BTS for your research! For more information about PL-BTS, please read the following [paper](https://arxiv.org/abs/2304.01472), # 🚧 Paper link update in progress—latest version accepted by Medical Image Analysis (2025), and we will update the paper link and citation soon. 🚧
 
      @misc{zhang2023unsupervised,
            title={Unsupervised Brain Tumor Segmentation with Image-based Prompts}, 
