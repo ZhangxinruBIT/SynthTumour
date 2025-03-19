@@ -22,12 +22,12 @@ Figure 1 provides an overview of the method proposed in this study. Overview of 
 Our work drew inspiration from the amazing fepegar's [resector](https://github.com/fepegar/resector) tool, which served as the main basis for generating the 3D tumor-like shape. We made certain revisions to the tool to suit our specific needs.
 # Installation
 ```
-conda create --name PLBTS python=3.7.7
-conda activate PLBTS
+conda create --name SynthTumour python=3.7.7
+conda activate SynthTumour
 pip install light-the-torch
 ltt install torch
 pip install git+https://github.com/fepegar/resector
-git clone https://github.com/ZhangxinruBIT/PL-BTS.git
+git clone https://github.com/ZhangxinruBIT/SynthTumour.git
 ```
 
 # Usage for Generation
