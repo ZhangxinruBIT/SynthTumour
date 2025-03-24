@@ -1,6 +1,6 @@
 # SynthTumour: Unsupervised Brain MRI Tumour Segmentation via Two-Stage Image Synthesis
 
-Please also cite this paper if you are using SynthTunour for your research! For more information about SynthTumour, please read the following [paper](https://arxiv.org/abs/2304.01472), # 
+Please also cite this paper if you are using SynthTunour for your research! For more information about SynthTumour, please read the following [paper] # 
 
 
 🚧🚧🚧  Paper link update in progress🚧🚧🚧 
@@ -31,8 +31,8 @@ pip install git+https://github.com/fepegar/resector
 git clone https://github.com/ZhangxinruBIT/SynthTumour.git
 ```
 
-# Usage for Generation for Stage1
-**Run demo**
+# Usage for Two-Stage Generation
+**Run demo for stage 1**
 ```
 cd SynthTumour
 python resect-multi-tumor.py  DemoData/OAS30003_MR_d1631/flair.nii.gz test_img.nii.gz test_lab.nii.gz
@@ -61,7 +61,7 @@ To utilize multiprocessing for generating images and their corresponding labels,
       │   └── flair.nii.gz
       ├── ...
     
-**Run with multiprocessing for tumour generation in Stage 1**
+# Run with multiprocessing for tumour generation in Stage 1
 ```
 cd SynthTumour
 python Prompt-multi-tumor.py
@@ -71,7 +71,7 @@ python Prompt-multi-tumor.py
 After that we could get the generated folds as below:
 
      .
-     └── Task100_OASIS-PLBTS
+     └── Task100_OASIS-SynthTumour
          ├── imagesTr
          │   ├── OAS30003_MR_d1631_0000.nii.gz
          │   ├── OAS30135_MR_d2931val_0000.nii.gz
@@ -86,9 +86,9 @@ Then you can train a junior model.
 
 The "val" marker is used to differentiate between data for training and validation. This marker can also be used for data splitting in [nnU-Net](https://github.com/MIC-DKFZ/nnUNet.git). Specifically, in **nnunet.training.net work_training.nnUNetTrainerV2.do_split()**.
 
-We did not focus on imitating the tumor texture, as establishing the accurate tumor texture from MRI images is challenging. Instead, we proposed a validation task to prevent the model from overfitting, ensuring better results.
+We proposed a validation set with distribution shift to prevent the model from overfitting, ensuring better model selection.
 
-Figure 2 illustrates the importance of the validation task in preventing overfitting caused by manual texture on MRI. It presents a schematic of the training process of the prompt model. Without the validation task, model selection may occur after the turning point of test accuracy, leading to overfitting, even if a validation set comprising synthetic data is separated from the training set. However, with the inclusion of the validation task, the turning point can be better identified for effective model selection.
+Figure 2 illustrates the importance of the validation set with distribution shift in preventing overfitting caused by manual texture on MRI. It presents a schematic of the training process of the junior model. Without the validation set with distribution shift, model selection may occur after the turning point of test accuracy, leading to overfitting, even if a validation set comprising synthetic data is separated from the training set. However, with the inclusion of the validation set with distribution shift, the turning point can be better identified for effective model selection.
 <div align=center><img width="650" height="450" src="Figs/loss.png"/></div>
 
 # Run with multiprocessing for tumour generation in Stage 2
