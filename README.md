@@ -64,7 +64,7 @@ To utilize multiprocessing for generating images and their corresponding labels,
 # Run with multiprocessing for generation in Stage 1
 ```
 cd SynthTumour
-python Prompt-multi-tumor.py
+python Stage1-multi-tumour.py
 
 ```
 
