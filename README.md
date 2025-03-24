@@ -61,7 +61,7 @@ To utilize multiprocessing for generating images and their corresponding labels,
       │   └── flair.nii.gz
       ├── ...
     
-# Run with multiprocessing for tumour generation in Stage 1
+**Run with multiprocessing for tumour generation in Stage 1**
 ```
 cd SynthTumour
 python Prompt-multi-tumor.py
