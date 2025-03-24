@@ -61,7 +61,7 @@ To utilize multiprocessing for generating images and their corresponding labels,
       │   └── flair.nii.gz
       ├── ...
     
-# Run with multiprocessing for tumour generation in Stage 1
+# Run with multiprocessing for generation in Stage 1
 ```
 cd SynthTumour
 python Prompt-multi-tumor.py
@@ -89,9 +89,9 @@ The "val" marker is used to differentiate between data for training and validati
 We proposed a validation set with distribution shift to prevent the model from overfitting, ensuring better model selection.
 
 Figure 2 illustrates the importance of the validation set with distribution shift in preventing overfitting caused by manual texture on MRI. It presents a schematic of the training process of the junior model. Without the validation set with distribution shift, model selection may occur after the turning point of test accuracy, leading to overfitting, even if a validation set comprising synthetic data is separated from the training set. However, with the inclusion of the validation set with distribution shift, the turning point can be better identified for effective model selection.
-<div align=center><img width="650" height="450" src="Figs/loss.png"/></div>
+<div align=center><img width="650" height="450" src="Figs/training_loss.png"/></div>
 
-# Run with multiprocessing for tumour generation in Stage 2
+# Run with multiprocessing for generation in Stage 2
 After you train a junior model, you can obtain the pseudo with the junior model, and utilised for the generation in the Stage 2.
 
 ```
