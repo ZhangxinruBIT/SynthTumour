@@ -2,6 +2,7 @@
 
 Please also cite this paper if you are using SynthTunour for your research! For more information about SynthTumour, please read the following [paper](https://arxiv.org/abs/2304.01472), # 
 
+
 🚧🚧🚧  Paper link update in progress🚧🚧🚧 
 
 ```
@@ -30,7 +31,7 @@ pip install git+https://github.com/fepegar/resector
 git clone https://github.com/ZhangxinruBIT/SynthTumour.git
 ```
 
-# Usage for Generation
+# Usage for Generation for Stage1
 **Run demo**
 ```
 cd SynthTumour
