@@ -32,12 +32,15 @@ git clone https://github.com/ZhangxinruBIT/SynthTumour.git
 ```
 
 # Usage for Two-Stage Generation
-**Run demo for stage 1**
+**Quickly run demo with the demo data for stage 1**
 ```
 cd SynthTumour
 python resect-multi-tumor.py  DemoData/OAS30003_MR_d1631/flair.nii.gz test_img.nii.gz test_lab.nii.gz
 
 ```
+
+# Stage 1: Synthesis with shape and intensity model
+
 
 To utilize multiprocessing for generating images and their corresponding labels, we need to organize the data in the following structure: 
 
@@ -61,7 +64,7 @@ To utilize multiprocessing for generating images and their corresponding labels,
       │   └── flair.nii.gz
       ├── ...
     
-# Run with multiprocessing for generation in Stage 1
+
 ```
 cd SynthTumour
 python Stage1-multi-tumour.py
@@ -91,7 +94,7 @@ We proposed a validation set with distribution shift to prevent the model from o
 Figure 2 illustrates the importance of the validation set with distribution shift in preventing overfitting caused by manual texture on MRI. It presents a schematic of the training process of the junior model. Without the validation set with distribution shift, model selection may occur after the turning point of test accuracy, leading to overfitting, even if a validation set comprising synthetic data is separated from the training set. However, with the inclusion of the validation set with distribution shift, the turning point can be better identified for effective model selection.
 <div align=center><img width="650" height="450" src="Figs/training_loss.png"/></div>
 
-# Run with multiprocessing for generation in Stage 2
+# Stage 2: Synthesis refinement with psedo-lables
 After you train a junior model, you can obtain the pseudo with the junior model, and utilised for the generation in the Stage 2.
 
 ```
