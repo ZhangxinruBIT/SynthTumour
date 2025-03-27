@@ -45,7 +45,7 @@ python resect-multi-tumor.py  DemoData/OAS30003_MR_d1631/flair.nii.gz test_img.n
 To utilize multiprocessing for generating images and their corresponding labels, we need to organize the data in the following structure: 
 
 
-**Data Structure**
+## Data Structure
 
 
      DemoData
@@ -83,7 +83,11 @@ After that we could get the generated folds as below:
              ├── OAS30003_MR_d1631.nii.gz
              ├── OAS30135_MR_d2931val.nii.gz
              └── OAS30137_MR_d3165.nii.gz
-Then you can train a junior model.
+
+
+## Train the junior model
+
+With the generated nnU-Net-like folds, Then you can train a junior model.
 
 **Usage for Segmentation with [nnU-Net](https://github.com/MIC-DKFZ/nnUNet.git)**
 
@@ -109,7 +113,11 @@ python Stage2_mixed_with_pseudo_label.py --mask_check_path XXXX --imagesTr_path 
 
 --healthyimgTr:Path to raw healthy images, like tumour-free images also with nnU-Net like data structure
 
-Next, you can train a senior model using nnU-Net! Make sure to combine the mixed data (imagesTrMix and labelsMix) with the original data and the pseudo-labels (imagesTr and labelsTr) for training.
+
+## Train the senior model
+
+
+Next, you can train a senior model also using [nnU-Net](https://github.com/MIC-DKFZ/nnUNet.git)! Make sure to combine the mixed data (imagesTrMix and labelsMix) with the original data and the pseudo-labels (imagesTr and labelsTr) together for training.
 
 
 
