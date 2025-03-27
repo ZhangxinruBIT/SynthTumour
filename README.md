@@ -67,7 +67,7 @@ To utilize multiprocessing for generating images and their corresponding labels,
 
 ```
 cd SynthTumour
-python Stage1-multi-tumour.py
+python Stage1_shape_intensity_for_tumour.py
 
 ```
 
