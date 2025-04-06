@@ -87,7 +87,7 @@ After that we could get the generated folds as below:
 
 ## Train the junior model
 
-With the generated nnU-Net-like folds, Then you can train a junior model.
+With the generated nnU-Net-like folds, Then you can train a 3D junior model. 
 
 **Usage for Segmentation with [nnU-Net](https://github.com/MIC-DKFZ/nnUNet.git)**
 
@@ -117,7 +117,7 @@ python Stage2_mixed_with_pseudo_label.py --mask_check_path XXXX --imagesTr_path 
 ## Train the senior model
 
 
-Next, you can train a senior model also using [nnU-Net](https://github.com/MIC-DKFZ/nnUNet.git)! Make sure to combine the mixed data (imagesTrMix and labelsMix) with the original data and the pseudo-labels (imagesTr and labelsTr) together for training.
+Next, you can train a 3D senior model also using [nnU-Net](https://github.com/MIC-DKFZ/nnUNet.git)! Make sure to combine the mixed data (imagesTrMix and labelsMix) with the original data and the pseudo-labels (imagesTr and labelsTr) together for training.
 
 
 
